@@ -22,7 +22,7 @@ jobs:
       uses: actions/checkout@v1     # Checkout my project
     
     - name: Create zip deployment package
-      run:  zip -r ${{ DEPLOY_PACKAGE_NAME }} ./ -x "*git*"   # -x - exclude *git* files
+      run:  zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x "*git*"   # -x - exclude *git* files
       
     
       
